@@ -1,2 +1,129 @@
-thay đổi c3 alpha
-<h2>thay đổi nội dung c4 alpha</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<style>
+    #form {
+        width: 500px;
+        margin: 50px auto;
+    }
+    
+    .table {
+        width: 700px;
+        margin: 50px auto;
+    }
+    
+    th,
+    td {
+        border: 1px solid #eee;
+    }
+    
+    .sussec {
+        display: none;
+    }
+    
+    .sussec.active {
+        z-index: 10;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .sus-item {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    
+    .sus-item h3 {
+        text-align: center;
+        line-height: 200px;
+    }
+    
+    .select-h2 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+    <form id="form">
+        <h2 class="select-h2">Đăng kí tour</h2>
+        <div class="mb-3">
+            <input type="text" name="" class="form-control" id="tour" placeholder="Tên tour">
+            <div class="errMess"></div>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="" class="form-control" id="tourID" placeholder="Mã tuor">
+            <div class="errMess"></div>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="" class="form-control" id="donvi" placeholder="Đơn vị tổ chức">
+            <div class="errMess"></div>
+        </div>
+        <div class="mb-3">
+            <input type="radio" id="man" name="gender" value="nam">
+            <label for="man">Nam</label>
+            <input type="radio" id="feman" name="gender" value="nữ">
+            <label for="feman">Nữ</label>
+            <div class="errMess"></div>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="" class="form-control" id="quantity" placeholder="Số người đi cùng">
+            <div class="errMess"></div>
+        </div>
+        <div class="mb-3">
+            <input type="text" name="" class="form-control" id="price" placeholder="Giá tiền">
+            <div class="errMess"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng kí</button>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên tour</th>
+                <th>Mã tour</th>
+                <th>Đơn vị tổ chức</th>
+                <th>Giới tính</th>
+                <th>Số người đi cùng</th>
+                <th>Giá tiền</th>
+                <th>Tổng tiền</th>
+            </tr>
+        </thead>
+        <tbody class="render">
+
+
+        </tbody>
+    </table>
+    <div class="sussec">
+        <div class="sus-item">
+            <h3>Đã thêm vào bảng</h3>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
